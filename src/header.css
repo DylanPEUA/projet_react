@@ -1,10 +1,11 @@
 .header {
   display: flex;
-  justify-content: space-between; /* Écarte le nom et le menu */
-  align-items: center;            /* Centre verticalement */
-  padding: 20px 40px;
-  background-color: #000;         /* Fond noir */
-  color: #fff;                    /* Texte blanc */
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+  color: white;
+  padding: 20px;
+  position: relative;
 }
 
 .logo {
@@ -12,13 +13,46 @@
   font-weight: bold;
 }
 
-.nav a {
-  color: #fff;                    /* Liens blancs */
-  text-decoration: none;          /* Pas de soulignement */
-  margin-left: 30px;              /* Espace entre les liens */
-  transition: color 0.3s;
+.nav {
+  display: flex;
+  gap: 20px;
 }
 
-.nav a:hover {
-  color: #ddd;                    /* Effet hover */
+.nav a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 10px;
+  transition: background 0.3s;
+}
+
+.nav a.active {
+  background-color: #444;
+  border-radius: 4px;
+}
+
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Responsive menu */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #000;
+    width: 200px;
+    display: none;
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
 }

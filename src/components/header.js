@@ -1,17 +1,25 @@
-import React from 'react';
-import './header'; // Pour le style
+import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import '../Header.css'; // Style personnalisé
 
 function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <header className="header">
       <div className="logo">John Doe</div>
-      <nav className="nav">
-        <a href="/">Home</a>
-        <a href="/services">Services</a>
-        <a href="/portfolio">Portfolio</a>
-        <a href="/contact">Contact</a>
-        <a href="/mentions-legales">Mentions légales</a>
-      </nav>
+
+      <div className={`nav ${isOpen ? 'open' : ''}`}>
+        <NavLink to="/" end className={({ isActive }) => isActive ? 'active' : ''}>Home</NavLink>
+        <NavLink to="/services" className={({ isActive }) => isActive ? 'active' : ''}>Services</NavLink>
+        <NavLink to="/portfolio" className={({ isActive }) => isActive ? 'active' : ''}>Portfolio</NavLink>
+        <NavLink to="/contact" className={({ isActive }) => isActive ? 'active' : ''}>Contact</NavLink>
+        <NavLink to="/mentions" className={({ isActive }) => isActive ? 'active' : ''}>Mentions légales</NavLink>
+      </div>
+
+      <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
+        ☰
+      </div>
     </header>
   );
 }
