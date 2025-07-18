@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import '../Header.css'; // Style personnalisé
+import '../header.css'; // Style personnalisé
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
