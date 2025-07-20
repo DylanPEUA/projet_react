@@ -20,9 +20,6 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/mentions" element={<Mentions />} />
       </Routes>
-      <div className="bg-red-500 text-white p-4 text-center">
-        Tailwind fonctionne !
-      </div>
       <Footer />
     </BrowserRouter>
   );

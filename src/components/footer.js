@@ -5,13 +5,13 @@ import { FaGithub, FaTwitter, FaLinkedin } from 'react-icons/fa';
 
 function Footer() {
   return (
-    <footer className="bg-red-500 text-white py-10 px-6">
+    <footer className="bg-gray-800 text-white py-10 px-6">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-8">
         
         {/* Colonne 1 : Infos & Réseaux */}
         <div className="flex-1">
           <h2 className="text-xl font-bold mb-4">John Doe</h2>
-          <p>123 Rue du Dev<br />98700 Papeete, Tahiti</p>
+          <p>456 Rue du roi<br />98700 Papeete, Tahiti</p>
           <p>Tél : +689 87 00 00 00</p>
           <div className="flex gap-4 mt-4">
             <a
