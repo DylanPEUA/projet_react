@@ -8,20 +8,24 @@ import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
 import Mentions from './pages/Mentions';
 
+// Import Google Fonts dans le projet
+import './index.css'; 
 
 function App() {
   return (
-    <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/mentions" element={<Mentions />} />
-      </Routes>
-      <Footer />
-    </BrowserRouter>
+    <div className="font-sans">
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/mentions" element={<Mentions />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </div>
   );
 }
 
