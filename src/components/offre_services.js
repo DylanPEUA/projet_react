@@ -8,7 +8,7 @@ function Offreservices() {
   return (
     <>
         {/* UX Design */}
-        <div className="shadow-md border border-gray-300 px-1 py-5">
+        <div className="shadow-md border border-gray-300 px-1 py-5 transition-colors duration-300 hover:bg-gray-100">
             <div className="flex justify-center p-8">
                 <PaintBrushIcon className="h-8 w-8 text-blue-500" />
             </div>
@@ -19,7 +19,7 @@ function Offreservices() {
             </p>
         </div>
         {/* Développement web */}
-        <div className="shadow-md border border-gray-300 px-1 py-5">
+        <div className="shadow-md border border-gray-300 px-1 py-5 transition-colors duration-300 hover:bg-gray-100">
             <div className="flex justify-center p-8">
                 <CodeBracketIcon className="h-8 w-8 text-blue-500" />
             </div>
@@ -30,7 +30,7 @@ function Offreservices() {
             </p>
         </div>
         {/* Référencement */}
-        <div className="shadow-md border border-gray-300 px-1 py-5">
+        <div className="shadow-md border border-gray-300 px-1 py-5 transition-colors duration-300 hover:bg-gray-100">
             <div className="flex justify-center p-8">
                 <MagnifyingGlassIcon className="h-8 w-8 text-blue-500" />
             </div>
