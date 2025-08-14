@@ -34,18 +34,23 @@ function Mescoord() {
       <h2 className="text-2xl font-bold mb-6 flex justify-start">Mes coordonnées</h2>
       <div className="w-full h-1 bg-blue-500 mt-2" />
 
-      <p className="text-black text-sm leading-relaxed">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      </p>
-      <p className="text-black text-sm leading-relaxed">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-      </p>
-      <p className="text-black text-sm leading-relaxed">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-      </p>
+      <div className="flex-1 text-left">
+        <h2 className="text-xl font-bold mb-4">John Doe</h2>
+        <p>Ave du Prince Hinoi<br />98714 Papeete, French Polynesia</p>
+        <p>Tél : +689 87 00 00 00</p>
+      </div>
+
+      <div className="mt-4">
+        <iframe
+          title="Carte Google Maps"
+          src="https://www.google.com/maps?q=Avenue%20du%20Prince%20Hinoï,%2098713%20Papeete,%20French%20Polynesia&output=embed"
+          width="100%"
+          height="400"
+          style={{ border: 0 }}
+          allowFullScreen=""
+          loading="lazy"
+        ></iframe>
+      </div>
     </div>
   );
 }
