@@ -59,6 +59,6 @@ npm test
 
 ## Auteur
 
-Dylan Peua
-Date de dernière modification : Janvier 2026
-```
+- Dylan Peua
+- Date de dernière modification : Janvier 2026
+
