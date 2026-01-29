@@ -6,10 +6,12 @@ function Header() {
 
   return (
     <header className="flex justify-between items-center bg-gray-800 text-white p-5 relative">
-      {/* Logo */}
-      <div className="text-2xl font-bold">John Doe</div>
+      {/* Logo cliquable : ramène à l'accueil */}
+      <NavLink to="/" className="text-2xl font-bold" style={{ textDecoration: 'none', color: 'inherit' }}>
+        John Doe
+      </NavLink>
 
-      {/* Navigation */}
+      {/* Menu de navigation principal (responsive) */}
       <nav
         className={`
           flex gap-5
@@ -20,50 +22,59 @@ function Header() {
           ${isOpen ? 'flex' : 'hidden'} md:flex
         `}
       >
+        {/* Lien Accueil, se ferme sur mobile au clic */}
         <NavLink
           to="/"
           end
           className={({ isActive }) =>
-            `px-2 py-1 ${isActive ? 'bg-gray-700 rounded' : ''}`
+            `px-2 py-1 transition-all duration-200 ${isActive ? 'font-bold underline' : ''} hover:underline`
           }
+          onClick={() => setIsOpen(false)}
         >
           Home
         </NavLink>
+        {/* Lien Services */}
         <NavLink
           to="/services"
           className={({ isActive }) =>
-            `px-2 py-1 ${isActive ? 'bg-gray-700 rounded' : ''}`
+            `px-2 py-1 transition-all duration-200 ${isActive ? 'font-bold underline' : ''} hover:underline`
           }
+          onClick={() => setIsOpen(false)}
         >
           Services
         </NavLink>
+        {/* Lien Portfolio */}
         <NavLink
           to="/portfolio"
           className={({ isActive }) =>
-            `px-2 py-1 ${isActive ? 'bg-gray-700 rounded' : ''}`
+            `px-2 py-1 transition-all duration-200 ${isActive ? 'font-bold underline' : ''} hover:underline`
           }
+          onClick={() => setIsOpen(false)}
         >
           Portfolio
         </NavLink>
+        {/* Lien Contact */}
         <NavLink
           to="/contact"
           className={({ isActive }) =>
-            `px-2 py-1 ${isActive ? 'bg-gray-700 rounded' : ''}`
+            `px-2 py-1 transition-all duration-200 ${isActive ? 'font-bold underline' : ''} hover:underline`
           }
+          onClick={() => setIsOpen(false)}
         >
           Contact
         </NavLink>
+        {/* Lien Mentions légales */}
         <NavLink
           to="/mentions"
           className={({ isActive }) =>
-            `px-2 py-1 ${isActive ? 'bg-gray-700 rounded' : ''}`
+            `px-2 py-1 transition-all duration-200 ${isActive ? 'font-bold underline' : ''} hover:underline`
           }
+          onClick={() => setIsOpen(false)}
         >
           Mentions légales
         </NavLink>
       </nav>
-
-      {/* Hamburger menu */}
+      {/* Icône menu hamburger (affiché sur mobile) */}
       <div
         className="md:hidden text-2xl cursor-pointer"
         onClick={() => setIsOpen(!isOpen)}

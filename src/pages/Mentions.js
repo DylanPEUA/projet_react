@@ -1,3 +1,5 @@
+
+// Page Mentions légales : informations éditeur, hébergeur, crédits (accordéon)
 import { useState } from "react";
 import {
   MapIcon,
@@ -8,13 +10,16 @@ import {
 import Section from '../components/section';
 
 function Mentions() {
+
+  // Index de la section ouverte (accordéon)
   const [openIndex, setOpenIndex] = useState(null);
 
+  // Ouvre/ferme une section de l'accordéon
   const toggleSection = (index) => {
-    // Accordéon : si la section est déjà ouverte, on ferme tout, sinon on ouvre la nouvelle
     setOpenIndex(openIndex === index ? null : index);
   };
 
+  // Sections à afficher dans l'accordéon
   const sections = [
     {
       title: "Éditeur du site",
@@ -107,11 +112,13 @@ function Mentions() {
 
   return (
     <>
+      {/* En-tête de la page mentions légales */}
       <div className="py-16 px-4 bg-white text-center">
         <h2 className="text-3xl font-bold text-gray-800 ">Mentions Légales</h2>
         <div className="w-1/4 mx-auto h-1 bg-blue-500 mt-2 mb-12" />
       </div>
 
+      {/* Accordéon des sections légales */}
       <div className="w-3/4 mx-auto">
         {sections.map((section, index) => (
           <Section
@@ -123,7 +130,6 @@ function Mentions() {
               ${index === 0 ? "mt-4" : ""}
               ${index === sections.length - 1 ? "mb-8" : ""}
             `}>
-          
             {section.content}
           </Section>
         ))}

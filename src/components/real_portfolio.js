@@ -1,5 +1,8 @@
+
+// Composant principal du portfolio : affiche une liste de réalisations sous forme de cards
 import React from 'react';
 
+// Liste des projets à afficher dans le portfolio
 const portfolioItems = [
   {
     title: 'Fresh Food',
@@ -40,8 +43,10 @@ const portfolioItems = [
 ];
 
 function PortfolioCard({ title, description, imgSrc, footer }) {
+  // Card individuelle pour un projet du portfolio
   return (
-    <div className="border border-gray-300 rounded-md">
+    <div className="border border-gray-300 rounded-md transition-all duration-200 hover:shadow-2xl hover:bg-gray-100">
+      {/* Image du projet */}
       <div className="flex flex-col items-center justify-center text-white">
         <img
           src={imgSrc}
@@ -50,11 +55,15 @@ function PortfolioCard({ title, description, imgSrc, footer }) {
           style={{ maxWidth: '100%', height: 'auto' }}
         />
       </div>
+      {/* Titre du projet */}
       <h3 className="text-xl font-bold text-gray-800 mt-2 mb-2">{title}</h3>
+      {/* Description du projet */}
       <p className="text-black text-sm leading-relaxed mb-4">{description}</p>
+      {/* Bouton d'action (exemple) */}
       <button className="bg-blue-500 hover:bg-blue-600 text-white text-sm py-1 px-3 rounded mb-4">
         Voir le site
       </button>
+      {/* Footer de la card : techno ou info */}
       <div className="border-t border-gray-300 text-gray-700 text-sm bg-gray-100 text-center flex items-center justify-center h-8">
         {footer}
       </div>
@@ -62,6 +71,7 @@ function PortfolioCard({ title, description, imgSrc, footer }) {
   );
 }
 
+// Composant qui affiche toutes les cards du portfolio
 function Realportfolio() {
   return (
     <>
