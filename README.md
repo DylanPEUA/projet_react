@@ -57,6 +57,13 @@ npm test
 - Tailwind CSS
 - React Icons
 
+## Dossier matériel
+
+Le dossier `material` contient :
+- Les images utilisées dans le projet
+- La consigne de l'exercice
+- Les maquettes des pages à réaliser
+
 ## Auteur
 
 - Dylan Peua
